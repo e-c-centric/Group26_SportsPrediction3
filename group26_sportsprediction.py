@@ -16,7 +16,6 @@ from sklearn.model_selection import KFold, cross_val_score, train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, VotingRegressor
 import xgboost as xgb
-import flask
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import GridSearchCV
@@ -532,3 +531,8 @@ print("MSE: %.4f" % mse)
 print("size of prediction: ", len(gb_model.predict(X_22)))
 print("prediction: \n", gb_model.predict(X_22))
 print("test score: {0:.4f}\n".format(score))
+
+import pickle
+pickle_out = open("classifier.pkl", "wb")
+pickle.dump(improved_gbr, pickle_out)
+pickle_out.close()
