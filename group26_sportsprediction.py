@@ -16,6 +16,7 @@ from sklearn.model_selection import KFold, cross_val_score, train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, VotingRegressor
 import xgboost as xgb
+import flask
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import GridSearchCV
