@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import numpy as np
-from group26_sportsprediction import ensemble   # Import your machine learning model module
-
+from group26_sportsprediction import ensemble   
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
